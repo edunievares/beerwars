@@ -1,17 +1,15 @@
-test:
- adapter: mysql2
- host: localhost
- username: root
- password: ''
- reconnect: true
- socket:
- database: beerwars_test
-
 development:
- adapter: mysql2
- host: localhost
- username: root
- password: ''
- reconnect: true
- socket:
- database: beerwars_development
+  adapter: postgresql
+  encoding: unicode
+  database: beerwars_development
+  pool: 5
+  username: admin
+  password:
+
+  test:
+    adapter: postgresql
+    encoding: unicode
+    database: beerwars_test
+    pool: 5
+    username: admin
+    password:
